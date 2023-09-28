@@ -1,5 +1,7 @@
 <template>
-    <Header/>
+    <Header
+        :carrito="carrito"
+    />
         <main class="container-xl mt-5">
             <h2 class="text-center">Nuestra Colección</h2>
 
@@ -30,6 +32,7 @@ onMounted( () => {
 });
 
 const agregarCarrito = (guitarra) => {
+    guitarra.cantidad = 1;
     carrito.value.push(guitarra)
 }
 
